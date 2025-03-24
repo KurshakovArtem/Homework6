@@ -1,5 +1,7 @@
 package data
 
+import attachments.Attachments
+
 data class Post(
     val id: Int,                       // Идентификатор записи
     val ownerId: Int,                  // Идентификатор владельца стены, на которой размещена запись
@@ -14,5 +16,6 @@ data class Post(
     val friendsOnly: Boolean = false,  // true если запись была создана с опцией «Только для друзей»
     val canPin: Boolean = false,       // Информация о том, может ли текущий пользователь закрепить запись
     val canDelete: Boolean = false,    // Информация о том, может ли текущий пользователь удалить запись
-    val canEdit: Boolean = false       // Информация о том, может ли текущий пользователь редактировать запись
+    val canEdit: Boolean = false,       // Информация о том, может ли текущий пользователь редактировать запись
+    val attachments: Array<Attachments> = emptyArray()
 )
