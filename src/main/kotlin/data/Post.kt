@@ -1,7 +1,6 @@
 package data
 
 import attachments.Attachments
-import attachments.NotAvailable
 
 data class Post(
     val id: Int,                       // Идентификатор записи
@@ -18,5 +17,5 @@ data class Post(
     val canPin: Boolean = false,       // Информация о том, может ли текущий пользователь закрепить запись
     val canDelete: Boolean = false,    // Информация о том, может ли текущий пользователь удалить запись
     val canEdit: Boolean = false,      // Информация о том, может ли текущий пользователь редактировать запись
-    val attachments: Attachments = NotAvailable()      // Вложения
+    val attachments:  Array<Attachments> = emptyArray()     // Вложения
 )
