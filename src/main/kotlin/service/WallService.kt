@@ -19,7 +19,8 @@ object WallService {
         for ((index, actualPost) in posts.withIndex()) {
             if (actualPost.id == post.id) {
                 posts[index] = post.copy(likes = post.likes?.copy() ?: Likes(0),
-                    coments = post.coments?.copy() ?: Coments(0))
+                    coments = post.coments?.copy() ?: Coments(0),
+                )
                 return true
             }
         }
